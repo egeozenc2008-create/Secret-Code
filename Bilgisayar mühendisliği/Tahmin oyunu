@@ -1,0 +1,60 @@
+import random
+
+def oyun():
+    print("🎮 Tahmin Oyununa Hoşgeldin!")
+
+    # Zorluk seçimi
+    print("Zorluk seviyeni seç:")
+    print("1 - Kolay (1-50)")
+    print("2 - Orta (1-100)")
+    print("3 - Zor (1-500)")
+    secim = input("Seçimin (1/2/3): ")
+
+    if secim == "1":
+        ust_sinir = 50
+    elif secim == "2":
+        ust_sinir = 100
+    else:
+        ust_sinir = 500
+
+    sayi = random.randint(1, ust_sinir)
+    hak = int(input("Kaç hakta bulmak istersin? "))
+    deneme = 0
+
+    print(f"Ben 1 ile {ust_sinir} arasında bir sayı tuttum, bakalım bulabilecek misin?")
+
+    while hak > 0:
+        tahmin = int(input("Tahminin: "))
+        deneme += 1
+        hak -= 1
+
+        if tahmin < sayi:
+            print(f"Daha büyük bir sayı dene. (Kalan hak: {hak})")
+        elif tahmin > sayi:
+            print(f"Daha küçük bir sayı dene. (Kalan hak: {hak})")
+        else:
+            print(f"🎉 Tebrikler! {deneme} denemede bildin!")
+            return deneme
+
+    print(f"😢 Hakkın bitti! Tuttuğum sayı {sayi} idi.")
+    return None
+
+
+def oyun_baslat():
+    en_iyi_skor = None
+
+    while True:
+        skor = oyun()
+
+        if skor is not None:
+            if en_iyi_skor is None or skor < en_iyi_skor:
+                en_iyi_skor = skor
+                print(f"🏆 Yeni en iyi skorun: {en_iyi_skor} deneme!")
+
+        devam = input("Tekrar oynamak ister misin? (e/h): ")
+        if devam.lower() != "e":
+            print("👋 Oyun bitti, görüşürüz!")
+            break
+
+
+oyun_baslat()

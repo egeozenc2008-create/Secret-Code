@@ -1,0 +1,15 @@
+
+import time
+
+class Zamanlayici:
+    def __enter__(self):
+        self.baslangic = time.time()
+        return self  # istersen with bloğu içinde kullanabilirsin
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        bitis = time.time()
+        print(f"Geçen süre: {bitis - self.baslangic:.2f} saniye")
+
+
+
+
+

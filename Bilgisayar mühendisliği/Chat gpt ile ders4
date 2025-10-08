@@ -1,0 +1,26 @@
+def yas_kontrol(yas):
+    if yas < 0:
+        raise ValueError("Yaş eksi olamaz!")
+    elif yas < 18:
+        raise ValueError("18 yaşından küçüksün!")
+    else:
+        print("Yaş uygun:", yas)
+
+try:
+    yas = int(input("Yaşını gir: "))
+    yas_kontrol(yas)
+except ValueError as e:
+    print("Hata:", e)
+
+
+
+
+
+
+
+    
+
+
+
+
+

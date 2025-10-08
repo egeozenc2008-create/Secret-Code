@@ -1,0 +1,14 @@
+
+try:
+    bolunen = int(input("Bölünen sayıyı gir: "))
+    bolen = int(input("Bölen sayıyı gir: "))
+
+    sonuc = bolunen / bolen
+    print("Sonuç:", sonuc)
+
+except ValueError:
+    print("Hata: Lütfen sadece sayı gir!")
+except ZeroDivisionError:
+    print("Hata: Bir sayıyı 0'a bölemezsin.")
+finally:
+    print("Program bitti ✅")

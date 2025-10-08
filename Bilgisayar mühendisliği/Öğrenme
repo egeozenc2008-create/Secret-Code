@@ -1,0 +1,6 @@
+
+sayilar = list(range(1, 31))
+sonuc = [x for x in sayilar if x % 2 == 0 or x % 5 == 0]
+
+print("Sonuç:", sonuc)
+

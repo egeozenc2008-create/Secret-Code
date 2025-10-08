@@ -1,0 +1,29 @@
+# Alışveriş sepeti
+sepet = [
+    {"isim": "Telefon", "fiyat": 12000, "adet": 1},
+    {"isim": "Kulaklık", "fiyat": 800, "adet": 2},
+    {"isim": "Şarj Aleti", "fiyat": 300, "adet": 1},
+    {"isim": "Defter", "fiyat": 40, "adet": 5},
+]
+
+# 1. Toplam fiyat (sum + comprehension)
+toplam = sum(u["fiyat"] * u["adet"] for u in sepet)
+print("Toplam fiyat:", toplam)
+
+# 2. 50 TL’den ucuz ürünler (list comprehension + if)
+ucuzlar = [u for u in sepet if u["fiyat"] < 50]
+print("Ucuz ürünler:", ucuzlar)
+
+# 3. %10 indirim uygulanmış fiyatlar (list comprehension)
+indirimli = [{**u, "fiyat": u["fiyat"] * 0.9} for u in sepet]
+print("İndirimli fiyatlar:", indirimli)
+
+
+
+
+
+
+
+
+
+

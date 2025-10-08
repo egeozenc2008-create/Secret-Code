@@ -1,0 +1,20 @@
+import datetime
+import time
+
+bugününtarihi = datetime.date.today()
+
+print(bugününtarihi)
+
+
+yedi_günsonrasi = bugününtarihi + datetime.timedelta(days=7)
+print(yedi_günsonrasi)
+
+
+
+
+
+
+
+
+
+

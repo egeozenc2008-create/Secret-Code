@@ -1,0 +1,5 @@
+sayilar = list(range(1, 11))  # 1'den 10'a kadar sayılar
+
+sonuc = {x: x**2 for x in sayilar}
+
+print("Sayıların kareleri:", sonuc)

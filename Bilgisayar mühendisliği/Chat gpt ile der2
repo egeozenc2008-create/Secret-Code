@@ -1,0 +1,13 @@
+sayilar = [3, 6, 9, 12, 15, 18]
+
+# 1. Kareler
+kareler = [x**2 for x in sayilar]
+print("Kareler:", kareler)
+
+# 2. 3'e bölünenler
+uc_bolunenler = [x for x in sayilar if x % 3 == 0]
+print("3'e bölünenler:", uc_bolunenler)
+
+# 3. Toplam
+toplam = sum(uc_bolunenler)
+print("Toplam:", toplam)

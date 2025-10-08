@@ -1,0 +1,5 @@
+git clone link 
+isdigit = bu kod sadece sayı girmesini engeller 
+git pull 
+split() = bir metni patçalara böler ve liste yapar 
+enumerate() fonksiyonu, bir liste üzerinde döngü yaparken hem sıra numarasını hem de elemanı aynı anda almamızı sağlar 

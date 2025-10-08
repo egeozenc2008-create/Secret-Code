@@ -1,0 +1,23 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# x değerleri
+x = np.linspace(-2, 2, 1000)
+
+# Kalp denklemleri
+y1 = np.sqrt(1 - (np.abs(x) - 1)**2)
+y2 = -3 * np.sqrt(1 - (np.abs(x)/2)**0.5)
+
+# Grafik
+plt.figure(figsize=(6,6))
+
+# Üst kısmı doldur
+plt.fill_between(x, y1, y2, color="red")
+
+# Kontur çizgisi
+plt.plot(x, y1, color="darkred")
+plt.plot(x, y2, color="darkred")
+
+plt.axis("equal")
+plt.axis("off")
+plt.show()
